@@ -5,7 +5,7 @@ import numpy as np
 parser = argparse.ArgumentParser(description ='Count the sum of integers.')
 parser.add_argument('integers', metavar ='N', 
                     type = int, nargs ='+',
-                    help ='an integer for the program')
+                    help ='Integers for the program')
 
 args = parser.parse_args()
 add = np.sum(args.integers)
