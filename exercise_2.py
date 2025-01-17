@@ -2,7 +2,7 @@ import statistics as st
 import argparse
 import numpy as np
 
-parser = argparse.ArgumentParser(description ='Count the sum of integers.')
+parser = argparse.ArgumentParser(description ='Count the sum, max, min, mean, median and mode values of integers.')
 parser.add_argument('integers', metavar ='N', 
                     type = int, nargs ='+',
                     help ='Integers for the program')
