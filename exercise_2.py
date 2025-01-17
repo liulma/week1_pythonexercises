@@ -7,33 +7,17 @@ parser.add_argument('integers', metavar ='N',
                     type = int, nargs ='+',
                     help ='an integer for the program')
 
-parser.add_argument('sum', 
-                    action ='store_const',
-                    const = sum)
-
-parser.add_argument('max', 
-                    action ='store_const',
-                    const = max)
-
-parser.add_argument('min', 
-                    action ='store_const',
-                    const = min)
-
-parser.add_argument('len', 
-                    action ='store_const',
-                    const = len)
-
 args = parser.parse_args()
-median = np.median(args.integers)
-mode = st.mode(args.integers)
-add = args.sum(args.integers)
-max = args.max(args.integers)
-min = args.min(args.integers)
-mean = add / args.len(args.integers)
+add = np.sum(args.integers)
+max_val = np.max(args.integers)
+min_val = np.min(args.integers)
+mean_val = add / len(args.integers)
+median_val = np.median(args.integers)
+mode_val = st.mode(args.integers)
 
-print(add)
-print(max)
-print(min)
-print(mean)
-print(median)
-print(mode)
+print(f"The sum is: {add}")
+print(f"The maximum value is: {max_val}")
+print(f"The minimum value is: {min_val}")
+print(f"The mean is: {mean_val}")
+print(f"The median is: {median_val}")
+print(f"The mode is: {mode_val}")
